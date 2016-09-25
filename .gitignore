@@ -1,1 +1,6 @@
 /**/.DS_Store
+spec/PlayerSpec.js
+src/MIT.LICENSE
+src/Player.js
+src/Song.js
+notes.md
