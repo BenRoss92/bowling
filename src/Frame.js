@@ -3,10 +3,18 @@ function Frame(rolls) {
 }
 
 Frame.prototype = {
-  total: function() {
+roundScore : function(secondFrame) {
+    if (this.isSpare()) {
+      return this.frameScore() + secondFrame._rolls[0];
+    } else {
+      return this.frameScore();
+    }
+  },
+
+frameScore : function() {
   return this._rolls.reduce(function(a,b) {
       return (a + b);
-    })
+  });
   },
 
   isSpare: function() {
