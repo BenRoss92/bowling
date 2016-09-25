@@ -16,4 +16,9 @@ describe("Frame", function() {
     expect(frame.isSpare()).toBe(true);
   });
 
+  it("indicates when user rolls strike", function() {
+    frame = new Frame([10,0]);
+    expect(frame.isStrike()).toBe(true);
+  });
+
 });
