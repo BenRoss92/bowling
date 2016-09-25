@@ -8,8 +8,12 @@ describe("Frame", function() {
 
   it("calculates total of two rolls", function() {
     frame = new Frame([6,3]);
-    console.log(frame.total());
     expect(frame.total()).toEqual(9);
+  });
+
+  it("indicates when rolls equal a spare", function() {
+    frame = new Frame([6,4]);
+    expect(frame.isSpare()).toBe(true);
   });
 
 });
